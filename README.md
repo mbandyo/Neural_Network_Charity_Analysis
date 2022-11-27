@@ -22,5 +22,15 @@ A a CSV file containing more than 34,000 organizations that have received fundin
 After reading raw data from the charity_data.csv file, the data goes through first scan to ensure only data that could be relevant to grouping is handed to machine learning logic. The following steps are used to scrub data for use:
 * Drop identification columns 'EIN' and 'NAME'.
 * Determine tne number of unique values in each remaiing columns.
-* For number of unique values less than 100, bucketing is used to make group sizes reasonable.
-* 
+* For number of unique values less than 1800, bucketing is used to make group sizes reasonable.
+* Data was mapped to ensure all the columns have numerical representation.
+* Mapped and scrubbed data is merged into a dataframe.
+* Data is split into train and test datasets.
+
+## Model Design and Execution
+For initial model, the following layers were executed:
+* First hidden layer consisted of 80 nodes and rectified linear (relu) activation function.
+* Second hidden layer consisted of 30 nodes and rectified linear (relu) activation function.
+* Output layer uses sigmoid activation function.
+
+
