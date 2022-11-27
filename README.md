@@ -17,3 +17,10 @@ A a CSV file containing more than 34,000 organizations that have received fundin
 * SPECIAL_CONSIDERATIONS—Special consideration for application
 * ASK_AMT—Funding amount requested
 * IS_SUCCESSFUL—Was the money used effectively
+
+## Data Processing
+After reading raw data from the charity_data.csv file, the data goes through first scan to ensure only data that could be relevant to grouping is handed to machine learning logic. The following steps are used to scrub data for use:
+* Drop identification columns 'EIN' and 'NAME'.
+* Determine tne number of unique values in each remaiing columns.
+* For number of unique values less than 100, bucketing is used to make group sizes reasonable.
+* 
