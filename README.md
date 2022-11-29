@@ -30,7 +30,7 @@ After reading raw data from the charity_data.csv file, the data goes through fir
 ## Model Design and Execution
 For initial model, the following layers were executed:
 * First hidden layer consisted of 80 nodes and rectified linear (relu) activation function.
-* Second hidden layer consisted of 30 nodes and rectified linear (relu) activation function.\
+* Second hidden layer consisted of 30 nodes and rectified linear (relu) activation function.
 * Output layer uses sigmoid activation function.
 
 The model was trained on training dataset and then tested on test data. The performance of the model was not very good with accuracy of 73%.
@@ -42,7 +42,9 @@ In order to improve the model accuracy the model was fine tuned with the followi
 * Increased the final number of nodes in the hiddenlayers as 100 (hidden layer 1), 80 (hidden layer 2), 50 (hidden layer 3) and 30 (hidden layer 4). The model was trained with a number of different settings before arrivin at the final configuration. The accuracy of the trained model increasd to 74%, but test set accuracy was still around 73%. 
 
 ## Summary
-While the accuracy of the model was still below expectation, there is no way to conclude if changing modeling design would improve performance or the data set was not comprehensive.
+While the accuracy of the model was still below expectation, there is no way to conclude if changing modeling design would improve performance or the data set was not comprehensive. However, in theory, retaining all the variables and not reducing dimensions should achieve 100% accuracy. However, that would defeat the purpose of modeling for prediction purpose. 
+That said, it might be helpful to increase the number of hidden layers and neurons in each layer further to improve accuracy. However, there would be a trade-off in speed of execution and complexity of the model.
+
 
 
 
